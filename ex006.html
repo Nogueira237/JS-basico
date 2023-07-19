@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos DOM</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div#area{
+            background-color: gray;
+            color: white;
+            font: normal 18pt Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        var q = window.document.getElementById('area')
+        q.addEventListener('click', clique)
+        q.addEventListener('mouseenter', entrou)
+
+        function clique() {
+            q.innerText = "Mudou"
+            q.style.background = "red"
+        }
+        function entrou(){
+            q.innerText = "Entrou"
+            q.style.background = "gray"
+        }
+        
+    </script>
+    
+</body>
+</html>
