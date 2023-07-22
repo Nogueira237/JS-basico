@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste while</title>
+    <style>
+        body{
+            background-color: pink;
+            font: normal 18pt Arial;
+        }
+        div#data{
+            text-align: center;
+            margin-top: 15px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste e tals...</h1>
+    <p>plugs e plugs</p>
+    <div id = 'frase1'></div>
+    <div id = 'data'></div>
+    <script>
+        var dianow = new Date()
+        var dia = dianow.getDate()
+
+        var diames = window.prompt("Que dia do mês é hoje?")
+        if(diames == dia){
+        var f1 = window.document.getElementById('frase1')
+        f1.innerHTML = "Você acertou o dia!"
+        f1.style.backgroundColor = "green"
+        }else{
+            var f1 = window.document.getElementById('frase1')
+            f1.innerHTML = "Você errou o dia!"  
+            f1.style.backgroundColor = "red"
+        }
+        </script>
+        <script>
+            var d1 = new Date()
+                var d = d1.getDate()
+            var m1 = new Date()
+                var m = m1.getMonth()
+            var a1 = new Date()
+                var a = a1.getFullYear()
+            var fd = window.document.getElementById('data')
+                fd.innerHTML = `${d}/${m}/${a}`
+
+
+        </script>
+    
+</body>
+</html>
